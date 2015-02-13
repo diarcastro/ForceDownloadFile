@@ -1,0 +1,5 @@
+RewriteEngine on
+Options -Indexes
+
+RewriteCond %{QUERY_STRING} download
+RewriteRule ([^.]+)\.(pdf|txt) download.php?file=$1.$2 [L,QSA,NC]
